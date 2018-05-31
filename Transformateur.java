@@ -27,8 +27,7 @@ public class Transformateur {
 			break;
 
 		default:
-			throw new IllegalArgumentException("Le type de transformation est incorrect.");
-			
+			throw new IllegalArgumentException("Le type de transformation est incorrect.");			
 		}
 
 		return objMot;

@@ -2,8 +2,8 @@ package com.transformation;
 
 public class Phrase {
 
-	private String phraseOrignie = "bonjour chante exemple au devient";
-	private String phraseTransforme = "";
+	private String phraseOrignie = "";
+	private String phraseTransformee = "";
 	private String typeTransformation = "";
 
 	Phrase(String phrase, String typeTrans) {
@@ -23,12 +23,12 @@ public class Phrase {
 			phraseJa.append(" ").append(mot.getMot());
 		}
 
-		phraseTransforme = phraseJa.toString().trim();
+		phraseTransformee = phraseJa.toString().trim();
 	}
 
 	public void afficher() {
-
-		System.out.println(phraseTransforme);
+		
+		System.out.println(phraseTransformee);
 	}
 
 	public String getPhraseOrignie() {
@@ -36,7 +36,7 @@ public class Phrase {
 	}
 
 	public String getPhraseTransformeT() {
-		return phraseTransforme;
+		return phraseTransformee;
 	}
 
 	public String getTypeTransformation() {
