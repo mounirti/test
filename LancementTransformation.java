@@ -1,4 +1,4 @@
-package com.transfomation;
+package com.transformation;
 
 import java.util.Scanner;
 

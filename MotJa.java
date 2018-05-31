@@ -1,4 +1,4 @@
-package com.transfomation;
+package com.transformation;
 
 public class MotJa extends Mot {
 	
