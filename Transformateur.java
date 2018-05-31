@@ -1,21 +1,15 @@
 package com.transformation;
 
 public class Transformateur {
-
-	static Transformateur instanceGen = null;
+	private static Transformateur instanceGen;
 
 	public static Transformateur getTransformateur() {
-
 		if (instanceGen == null) {
 			instanceGen = new Transformateur();
 		}
 		return instanceGen;
 	}
-
-	public Transformateur() {
-		// TODO Auto-generated constructor stub
-	}
-
+	
 	Mot recupererMotTransformation(String typeTransformation) {
 		Mot objMot = null;
 		switch (typeTransformation) {
@@ -25,12 +19,9 @@ public class Transformateur {
 		case "JA":
 			objMot = new MotJa();
 			break;
-
 		default:
 			throw new IllegalArgumentException("Le type de transformation est incorrect.");			
 		}
-
 		return objMot;
 	}
-
 }

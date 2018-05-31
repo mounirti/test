@@ -6,7 +6,7 @@ import java.util.List;
 public abstract class Mot {
 	private final List<Character> lettresConsonne = Arrays.asList(new Character[] { 'Z', 'R', 'T', 'P', 'Q', 'S', 'D','F', 'G', 'H', 'J', 'K', 'L', 'M', 'W', 'X', 'C', 'V', 'B', 'N' });
 	private final List<Character> lettresVoyelle = Arrays.asList(new Character[] { 'A', 'E', 'U', 'I', 'O', 'Y' });
-	public final String lettreTrans = "av";
+	public final String codeTrans = "av";
 
 	public boolean isConsonne(char lettre) {
 		return lettresConsonne.contains(Character.toUpperCase(lettre));
@@ -18,5 +18,5 @@ public abstract class Mot {
 
 	public abstract void transformer(String mot);
 
-	public abstract String getMot();
+	public abstract String getValeur();
 }
