@@ -1,20 +1,26 @@
 package com.transformation;
 
-public class MotJa extends Mot {
+public class MotJa implements Mot {
 	private String valeur;
+	private String typeMot;
+	
+	public MotJa(String typeMot) {		
+		this.typeMot=typeMot;
+	}
+
 
 	public void transformer(String mot) {
 		StringBuilder motTrans = new StringBuilder();
 		char tabChar[] = mot.toCharArray();
 		for (int i = 0, j = 1; i < tabChar.length; i++, j++) {
-			if (j < tabChar.length && isConsonne(tabChar[i]) && isVoyelle(tabChar[j])) {
-				motTrans.append(tabChar[i]).append(codeTrans).append(tabChar[j]);
+			if (j < tabChar.length && Mot.isConsonne(tabChar[i]) && Mot.isVoyelle(tabChar[j])) {
+				motTrans.append(tabChar[i]).append(CODE_TRANS).append(tabChar[j]);
 				i++;j++;
 			} else {
 				motTrans.append(tabChar[i]);
 			}
-			if (i == 0 && isVoyelle(tabChar[i]))
-				motTrans.insert(0, codeTrans);
+			if (i == 0 && Mot.isVoyelle(tabChar[i]))
+				motTrans.insert(0, CODE_TRANS);
 		}
 		this.valeur = motTrans.toString();
 	}

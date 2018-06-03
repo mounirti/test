@@ -10,14 +10,14 @@ public class Transformateur {
 		return instanceGen;
 	}
 	
-	Mot recupererMotTransformation(String typeTransformation) {
+	Mot recupererMot(String typeTransformation) {
 		Mot objMot = null;
 		switch (typeTransformation) {
 		case "FR":
-			objMot = new MotFr();
+			objMot = new MotFr(typeTransformation);
 			break;
 		case "JA":
-			objMot = new MotJa();
+			objMot = new MotJa(typeTransformation);
 			break;
 		default:
 			throw new IllegalArgumentException("Le type de transformation est incorrect.");			

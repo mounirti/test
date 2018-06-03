@@ -1,5 +1,6 @@
 package com.transformation;
 
+import java.util.Locale.Category;
 import java.util.Scanner;
 
 public class LancementTransformation {
@@ -8,7 +9,8 @@ public class LancementTransformation {
 		String valeurPhrase = "";
 		String valeurTypeTrans = "";
 		//valeurPhrase = args[0];
-		//valeurTypeTrans = args[1];		
+		//valeurTypeTrans = args[1];	
+		try{
 		System.out.println("Veuillez saisir une phrase : ");
 		Scanner scanIn = new Scanner(System.in);
 		valeurPhrase = scanIn.nextLine();
@@ -17,5 +19,8 @@ public class LancementTransformation {
 		scanIn.close();		
 		Phrase ph = new Phrase(valeurPhrase, valeurTypeTrans.toUpperCase());
 		ph.afficher();
+		}catch (IllegalArgumentException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 }

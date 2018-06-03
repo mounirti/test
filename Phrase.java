@@ -13,7 +13,7 @@ public class Phrase {
 
 	private void transformer() {
 		Transformateur trans = Transformateur.getTransformateur();
-		Mot mot = trans.recupererMotTransformation(typeTransformation);
+		Mot mot = trans.recupererMot(typeTransformation);
 		String[] tabMot = phraseOrigine.split(" ");
 		StringBuilder phraseJa = new StringBuilder();
 		for (String valM : tabMot) {
